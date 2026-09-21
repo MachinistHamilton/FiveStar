@@ -1,0 +1,9 @@
+streamlit==1.64.0
+chromadb==1.5.9
+sentence-transformers==6.1.0
+PyMuPDF==1.28.2
+Pillow==12.3.0
+rank-bm25==0.2.2
+httpx==0.28.1
+pydantic-settings==2.15.0
+filelock==3.32.7
