@@ -1,0 +1,33 @@
+[
+  {
+    "question": "What is the normal inspection interval in the Equipment Manual?",
+    "document": "Equipment_Manual.pdf",
+    "page": 1,
+    "required_facts": ["12 months"]
+  },
+  {
+    "question": "What does E104 mean?",
+    "document": "Equipment_Manual.pdf",
+    "page": 2,
+    "required_facts": ["inlet blockage"]
+  },
+  {
+    "question": "What is the inspection interval under heavy operating conditions?",
+    "document": "Equipment_Manual.pdf",
+    "page": 2,
+    "required_facts": ["6 months"]
+  },
+  {
+    "question": "Compare the normal inspection intervals in both documents. Do they conflict?",
+    "sources": [
+      {"document": "Equipment_Manual.pdf", "page": 1},
+      {"document": "Service_Update.pdf", "page": 1}
+    ],
+    "required_facts": ["12 months", "9 months"],
+    "must_acknowledge_conflict": true
+  },
+  {
+    "question": "What is the warranty duration?",
+    "unanswerable": true
+  }
+]

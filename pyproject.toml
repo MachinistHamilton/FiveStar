@@ -1,0 +1,24 @@
+[project]
+name = "local-ai-document-assistant"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "models: requires the locally downloaded embedding and reranking models",
+    "vision: requires a running local Ollama and the downloaded vision model",
+]
+addopts = "-m 'not models and not vision'"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["config", "core", "scripts", "tests"]
